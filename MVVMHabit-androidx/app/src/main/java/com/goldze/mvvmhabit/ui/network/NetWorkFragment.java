@@ -61,22 +61,22 @@ public class NetWorkFragment extends BaseFragment<FragmentNetworkBinding, NetWor
 
     @Override
     public void initViewObservable() {
-        //监听下拉刷新完成
-        viewModel.uc.finishRefreshing.observe(this, new Observer() {
-            @Override
-            public void onChanged(@Nullable Object o) {
-                //结束刷新
-                binding.twinklingRefreshLayout.finishRefreshing();
-            }
-        });
-        //监听上拉加载完成
-        viewModel.uc.finishLoadmore.observe(this, new Observer() {
-            @Override
-            public void onChanged(@Nullable Object o) {
-                //结束刷新
-                binding.twinklingRefreshLayout.finishLoadmore();
-            }
-        });
+//        //监听下拉刷新完成
+//        viewModel.uc.finishRefreshing.observe(this, new Observer() {
+//            @Override
+//            public void onChanged(@Nullable Object o) {
+//                //结束刷新
+//                binding.twinklingRefreshLayout.finishRefreshing();
+//            }
+//        });
+//        //监听上拉加载完成
+//        viewModel.uc.finishLoadmore.observe(this, new Observer() {
+//            @Override
+//            public void onChanged(@Nullable Object o) {
+//                //结束刷新
+//                binding.twinklingRefreshLayout.finishLoadmore();
+//            }
+//        });
         //监听删除条目
         viewModel.deleteItemLiveData.observe(this, new Observer<NetWorkItemViewModel>() {
             @Override
